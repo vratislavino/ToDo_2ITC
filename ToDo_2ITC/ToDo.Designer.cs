@@ -73,6 +73,7 @@
             delete.TabIndex = 3;
             delete.Text = "❌";
             delete.UseVisualStyleBackColor = true;
+            delete.Click += delete_Click;
             // 
             // edit
             // 
