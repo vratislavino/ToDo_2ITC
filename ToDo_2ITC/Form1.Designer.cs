@@ -38,6 +38,7 @@
             aufgabenbeschreibung = new RichTextBox();
             aufgabentitel = new TextBox();
             erstellen = new Button();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -45,13 +46,13 @@
             erstellungspanel.SuspendLayout();
             SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // flussdiagrammpanel
             // 
             flussdiagrammpanel.AutoScroll = true;
             flussdiagrammpanel.BackColor = SystemColors.ButtonHighlight;
             flussdiagrammpanel.Dock = DockStyle.Fill;
             flussdiagrammpanel.Location = new Point(0, 0);
-            flussdiagrammpanel.Name = "flowLayoutPanel1";
+            flussdiagrammpanel.Name = "flussdiagrammpanel";
             flussdiagrammpanel.Size = new Size(669, 1021);
             flussdiagrammpanel.TabIndex = 0;
             // 
@@ -67,6 +68,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(label4);
             splitContainer1.Panel2.Controls.Add(erstellungspanel);
             splitContainer1.Panel2.Controls.Add(erstellen);
             splitContainer1.Size = new Size(1312, 1021);
@@ -82,7 +84,7 @@
             erstellungspanel.Controls.Add(label1);
             erstellungspanel.Controls.Add(aufgabenbeschreibung);
             erstellungspanel.Controls.Add(aufgabentitel);
-            erstellungspanel.Location = new Point(14, 96);
+            erstellungspanel.Location = new Point(14, 163);
             erstellungspanel.Name = "erstellungspanel";
             erstellungspanel.Size = new Size(613, 438);
             erstellungspanel.TabIndex = 1;
@@ -154,6 +156,16 @@
             erstellen.UseVisualStyleBackColor = true;
             erstellen.Click += erstellen_Klicken;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            label4.Location = new Point(14, 31);
+            label4.Name = "label4";
+            label4.Size = new Size(84, 38);
+            label4.TabIndex = 2;
+            label4.Text = "Počty";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -162,9 +174,11 @@
             Controls.Add(splitContainer1);
             Name = "Form1";
             Text = "Form1";
+            FormClosing += Form1_FormClosing;
             Load += Form1_Load;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
+            splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
             erstellungspanel.ResumeLayout(false);
@@ -184,5 +198,6 @@
         private RichTextBox aufgabenbeschreibung;
         private TextBox aufgabentitel;
         private Button hinzufugen;
+        private Label label4;
     }
 }

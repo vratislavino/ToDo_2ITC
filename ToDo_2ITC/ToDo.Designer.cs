@@ -64,6 +64,7 @@
             checkBox1.Size = new Size(22, 21);
             checkBox1.TabIndex = 2;
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // delete
             // 
@@ -83,6 +84,7 @@
             edit.TabIndex = 4;
             edit.Text = "✏️";
             edit.UseVisualStyleBackColor = true;
+            edit.Click += edit_Click;
             // 
             // ToDo
             // 

@@ -13,6 +13,8 @@ namespace ToDo_2ITC
     public partial class ToDo : UserControl
     {
         public event Action<ToDo> DeleteClicked;
+        public event Action<ToDo> EditClicked;
+        public event Action TodoChanged;
         private ToDoData data;
 
         public ToDoData Data => data;
@@ -34,6 +36,17 @@ namespace ToDo_2ITC
         private void delete_Click(object sender, EventArgs e)
         {
             DeleteClicked?.Invoke(this);
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            EditClicked?.Invoke(this);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            data.done = checkBox1.Checked;
+            TodoChanged?.Invoke();
         }
     }
 }
